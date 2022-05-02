@@ -148,6 +148,9 @@
     }
 
     /* footer */
+    .footer{
+        padding: 0 15px;
+    }
     .md-footer{
         width: 30%;
     }
