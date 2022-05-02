@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
     //auto chuyển slide
-    // autoSdile()
+    autoSdile()
     function autoSdile(){
         setInterval(() => {
             var currentSlide=document.querySelector('.one-slide--active')
@@ -49,5 +49,4 @@ document.addEventListener("DOMContentLoaded",function(){
             
         }, 5000);
     }
-    
 })

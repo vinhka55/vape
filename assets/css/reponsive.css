@@ -45,6 +45,35 @@
         display: none;
     }
 
+    /* nav mobile and table */
+    .wrapper-nav-small-screen{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: 0.5s;
+        transform: translateX(-100%);
+        z-index: 9;
+    }
+    .nav-small-screen{
+        width: 60%;
+        height: 100%;
+        background-color: #f3f3f3;
+        position: absolute;    
+    }
+    .animation-nav-small-screen{
+        transform: translateX(0);
+    }
+    .nav-small-screen .nav-item{
+        padding: 24px 0 24px 15px;
+        border-bottom: 1px solid rgb(196, 191, 191);
+    }
+    .nav-small-screen .nav-item__link {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: black;
+    }
+
 }
 
 @media screen and (min-width:740px) and (max-width:1024px) {

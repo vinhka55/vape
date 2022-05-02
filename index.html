@@ -13,6 +13,21 @@
     <title>Vape VN</title>
 </head>
 <body>
+    <div class="wrapper-nav-small-screen" id="js-wrapper-navigation">
+        <div class="nav-small-screen" id="js-nav-small-screen">
+            <h3 class="heading-text text-center">Menu</h3>
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-item__link" href="">home</a></li>
+                <li class="nav-item"><a class="nav-item__link" href="">sale</a></li>
+                <li class="nav-item"><a class="nav-item__link" href="">máy pod system</a></li>
+                <li class="nav-item"><a class="nav-item__link" href="">tinh dầu satlnic</a></li>
+                <li class="nav-item"><a class="nav-item__link" href="">phụ kiện pod</a></li>
+                <li class="nav-item"><a class="nav-item__link" href="">pod relx juul</a></li>
+                <li class="nav-item"><a class="nav-item__link" href="">dầu vape</a></li>
+                <li class="nav-item"><a class="nav-item__link" href="">tin tức</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="header">
         <div class="grid content-top">
             <div class="content-top__logo">
@@ -40,7 +55,7 @@
                     <i class="fa-solid fa-phone"></i>
                     Hồ Chí Minh: 0833379934
                 </div>
-                <div class="table-nav">
+                <div class="table-nav" id="js-show-nav">
                     <i class="icon-md-nav fa-solid fa-bars"></i>
                 </div>
                 <div class="top-user">
@@ -475,6 +490,19 @@
     }
     function prev(){
         categoryList.prepend(categoryItem[categoryItem.length-1])
+    }
+    var btnShowNav=document.getElementById('js-show-nav')
+    var jsNavSmallScreen=document.getElementById('js-nav-small-screen')
+    var wrapperNavigation=document.getElementById('js-wrapper-navigation')
+    btnShowNav.onclick=function(){
+        wrapperNavigation.style.display="block"
+        wrapperNavigation.classList.add("animation-nav-small-screen")
+    }
+    // When the user clicks anywhere outside of the nav mobile or tablet, close it
+    window.onclick = function(event) {
+        if (event.target == wrapperNavigation) {
+            wrapperNavigation.classList.remove("animation-nav-small-screen")
+        }
     }
 </script>
 </html>

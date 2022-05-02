@@ -43,7 +43,12 @@
 }
 .table-nav{
     display: none;
+    cursor: pointer;
 }
+.wrapper-nav-small-screen{
+    display: none;
+}
+
 .top-social__icon{
     color: var(--white-color);
     font-size: 2.8rem;
