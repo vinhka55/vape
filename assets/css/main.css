@@ -66,6 +66,46 @@
     margin-top: 32px;
     padding: 0 12px;
 }
+@keyframes runIconSocial1{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+@keyframes runIconSocial2{
+    from{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
+.top-social a{
+    position: relative;
+}
+.fb-blue{
+    color: #1877f2;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+}
+.test11:hover{
+    animation: runIconSocial1 linear 0.5s forwards;
+}
+.test11:hover ~ .fb-blue{
+    animation: runIconSocial2 linear 0.5s forwards;
+}
+.fa-youtube:hover{
+    color: red;
+    transition: 0.5s;
+}
 
 /* top navigation */
 .top-menu{
