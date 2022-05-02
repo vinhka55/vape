@@ -66,41 +66,14 @@
     margin-top: 32px;
     padding: 0 12px;
 }
-@keyframes runIconSocial1{
-    from{
-        transform: translateY(0);
-        opacity: 1;
-    }
-    to{
-        transform: translateY(-100%);
-        opacity: 0;
-    }
+
+.fa-facebook:hover{
+    color: #385898;
+    transition: 0.5s;
 }
-@keyframes runIconSocial2{
-    from{
-        transform: translateY(0);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(-100%);
-        opacity: 1;
-    }
-}
-.top-social a{
-    position: relative;
-}
-.fb-blue{
-    color: #1877f2;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    opacity: 0;
-}
-.test11:hover{
-    animation: runIconSocial1 linear 0.5s forwards;
-}
-.test11:hover ~ .fb-blue{
-    animation: runIconSocial2 linear 0.5s forwards;
+.fa-instagram-square:hover{
+    color: #fc7703;
+    transition: 0.5s;
 }
 .fa-youtube:hover{
     color: red;
@@ -116,6 +89,39 @@
 .top-menu-list{
     display: flex;
     line-height: 46px;
+}
+.top-menu-item{
+    position: relative;
+}
+.top-menu-item:hover .sub-menu-list{
+    display: block;
+}
+.top-menu .sub-menu-list{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    z-index: 99;
+    display: none;
+    top: 90%;
+    animation: subMenuFadeIn ease 0.5s;
+}
+.top-menu .sub-menu{
+    width: 100%;
+    border-bottom: 1px solid rgb(121, 114, 114);
+    padding: 0 15px;
+}
+.top-menu .sub-menu .sub-menu__link{
+    color: black;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+@keyframes subMenuFadeIn{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
 }
 
 .top-menu-item__link{
